@@ -1,0 +1,17 @@
+﻿@model IEnumerable<MVC_Assignment_Day2.Models.Employee>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+@{
+    foreach(var emp in Model)
+    {
+        @emp.Id
+        @emp.Name
+        @emp.Dept
+        @emp.Manager
+    }
+}
+
