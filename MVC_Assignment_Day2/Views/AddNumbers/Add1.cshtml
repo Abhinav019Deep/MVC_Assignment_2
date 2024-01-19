@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewData["Title"] = "Add1";
+}
+
+<h1>Add1</h1>
+
+@* <form method="post">
+    <label for="txtNo1">Enter first number : </label>
+    <input type="number" id="txtNo1" />
+    <br/>
+    <label for="txtNo1">Enter first number : </label>
+    <input type="number" id="txtNo1" />
+    <br />
+
+    <button type="submit">Add</button>
+
+</form> *@
+
+
+@*HTML Helper Methods*@
+
+@{
+    if (ViewBag.res != null)
+    {
+        @ViewBag.res
+    }
+    else
+    {
+        @using (Html.BeginForm(FormMethod.Post))
+        {
+            @Html.Label("Enter num 1: ")
+            @Html.TextBox("no1")
+            <br />
+            @Html.Label("Enter num 2: ")
+            @Html.TextBox("no2")
+            <button type="submit">Add</button>
+        }
+    }
+}
+
+
+
